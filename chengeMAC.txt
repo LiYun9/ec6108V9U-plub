@@ -1,0 +1,50 @@
+http://bbs.shafa.com/thread-1426975-1-1.html
+
+沙发
+没尾巴的牛
+16a
+
+1、先降级到出厂固件
+012
+
+2、网络设置选dhcp连接路由器，与电脑同一局域网，打开远程维护开关
+
+3、下载华为stb
+
+4、在stb里连接，点允许远程连接，点提交
+
+5、下载abd套件，并在cmd里运行它，
+关键命令是adb connect 192.168.x.x
+
+当出现connected to 192.168.x.x:5555时说明连接上了
+
+6、输入adb shell
+他会弹出
+root@Hi3798MV100:/ #
+
+再输入echo -ne "\x50\x01\x6B\x24\xF4\xD2" | dd of=/dev/mmcblk0p4 bs=1 seek=$((0x24)) conv=notrunc ; sync
+
+或者echo -ne "\x50\x01\x6B\x24\xF4\xD2" | dd of=/dev/block/mmcblk0p4 bs=1 seek=$((0x24)) conv=notrunc ; sync
+
+重启盒子看看关于本机里面是不是搞定了。
+
+7、升级盒子到最新版本，这个遇到问题，因为不升级的话点播都看不了。
+
+
+
+
+
+2018-0821、
+
+echo -ne "\x54\x93\x59\x50\xA5\x69" | dd of=/dev/block/mmcblk0p4 bs=1 seek=$((0x24)) conv=notrunc ; sync
+
+5\x69" | dd of=/dev/block/mmcblk0p4 bs=1 seek=$((0x24)) conv=notrunc ; sync   <
+6+0 records in
+6+0 records out
+6 bytes transferred in 0.002 secs (3000 bytes/sec)
+
+成功改了。
+
+但是开机仍然是自动下发数据是以前的账号，估计跟序列号也有绑定，那么我们直接手动输入账号，搞定了。
+
+就是不知道以后会不会出什么幺蛾子
