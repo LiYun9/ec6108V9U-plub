@@ -1,9 +1,6 @@
-# ec6108V9U-plub
 
-<html>
-    <body background="http://p5k7mvi7l.bkt.clouddn.com/1521920903206.jpg"><!--加背景图片-->
-    <h1>Hello World</h1><!-- 一级标题书写形式-->
-    <p>Hello World
+
+
     
 
 #备份固件  
@@ -26,7 +23,7 @@ https://www.baidu.com/s?ie=UTF-8&wd=3.3通过telnet方式登录华为悦盒%201�
 如果你有TTL线，，就可以将原厂备份出来：
 
 如果超级终端可以输入命令，就可以输入命令：
-mkdir -p /tmp/udisk;mount -t vfat /dev/sda1 /tmp/udisk;cd /backup;cp update.zip /tmp/udisk;unmount /tmp/udisk
+  mkdir -p /tmp/udisk;mount -t vfat /dev/sda1 /tmp/udisk;cd /backup;cp update.zip /tmp/udisk;unmount /tmp/udisk
 
 就可以将将原厂刷机文件update.zip备份到U盘上
 
@@ -36,17 +33,18 @@ mkdir -p /tmp/udisk;mount -t vfat /dev/sda1 /tmp/udisk;cd /backup;cp update.zip 
 
 华为盒子EC6108V9A备份backup的命令是，还是先进入工程测试模式插入u盘
 
-mkdir /tmp/udisk
-mkdir /tmp/backup
-mount -t vfat /dev/block/sda1 /tmp/udisk
-mount -t ext4 /dev/block/platform/1021c000.rksdmmc/by-name/backup /tmp/backup
-cp -a /tmp/backup /tmp/udisk/v9abackup
+  mkdir /tmp/udisk
+  mkdir /tmp/backup
+  mount -t vfat /dev/block/sda1 /tmp/udisk
+  mount -t ext4 /dev/block/platform/1021c000.rksdmmc/by-name/backup /tmp/backup
+  cp -a /tmp/backup /tmp/udisk/v9abackup
 
-逆向写入：mkdir /tmp/udisk
-mkdir /tmp/backup
-mount -t vfat /dev/block/sda1 /tmp/udisk
-mount -t ext4 /dev/block/platform/1021c000.rksdmmc/by-name/backup /tmp/backup
-cp -a /tmp/udisk/v9abackup/update.zip /tmp/backup/update.zip
+逆向写入：
+  mkdir /tmp/udisk
+  mkdir /tmp/backup
+  mount -t vfat /dev/block/sda1 /tmp/udisk
+  mount -t ext4 /dev/block/platform/1021c000.rksdmmc/by-name/backup /tmp/backup
+  cp -a /tmp/udisk/v9abackup/update.zip /tmp/backup/update.zip
 
 这个操作需要有点基础的朋友才行， 希望大家备份了自己的出厂固件分享到论坛，感谢感谢！
 
@@ -63,10 +61,10 @@ cp -a /tmp/udisk/v9abackup/update.zip /tmp/backup/update.zip
 4）成功root后，可安装第三方APK,如当贝市场，从当贝市场中可直接下载更多电视软件，破解运营商限制看电视。
   
 2. sshroid：客户端用putty/sercertcrt登录，输入root@加盒子ip地址打开，输入密码admin登录wifiadb： 使用adb shell连接
-mkdir /tmp/ii
-mount -t ext3 /dev/block/platform/hi_mci.1/by-name/backup /tmp/ii
+  mkdir /tmp/ii
+  mount -t ext3 /dev/block/platform/hi_mci.1/by-name/backup /tmp/ii
 备份：
-cp /tmp/ii/update.zip /sdcard/或者u盘目录
+  cp /tmp/ii/update.zip /sdcard/或者u盘目录
 3. 用文件管理器将U盘已准备好的白色版固件覆盖到/tmp/ii/update.zip
 4. 重启，按电源开机，并不断按遥控电源按扭进入 recovery模式，选择第二项升级
 5. 可以DIY这个刷机包，也可以做成卡刷包。
@@ -96,30 +94,27 @@ df是不知道。。。
 http://www.hdpfans.com/thread-798429-1-1.html
 
 
-mkdir /tmp/rom
+  mkdir /tmp/rom
 	
-ls /tmp/rom
-cat /sys/block/mmcblk0/dev
-cat /sys/block/mmcblk0/dev
-df
-cp /tmp/rom/update.zip /mnt/sda/sda1
-ls /mnt/sda/sda1 -l
+  ls /tmp/rom
+  cat /sys/block/mmcblk0/dev
+  cat /sys/block/mmcblk0/dev
+  df
+  cp /tmp/rom/update.zip /mnt/sda/sda1
+  ls /mnt/sda/sda1 -l
 
 
 
 
--rwxrwxrwx system   sdcard_rw 254151199 2016-01-22 16:04 update.zip失败了，是广东的固件
+  -rwxrwxrwx system   sdcard_rw 254151199 2016-01-22 16:04 update.zip失败了，是广东的固件
 
 从另一个正常的盒子里先降级成广东的，再备份，发现备份成功B015
 
 
 
--rwxrwxrwx system   sdcard_rw 226501658 2018-08-21 23:15 update.zip
+  -rwxrwxrwx system   sdcard_rw 226501658 2018-08-21 23:15 update.zip
 
 
-</p><!-- 普通段落书写格式-->
-    </body>
-    </html>
 
 
 
