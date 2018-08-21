@@ -33,13 +33,12 @@ https://www.baidu.com/s?ie=UTF-8&wd=3.3通过telnet方式登录华为悦盒%201�
 
 华为盒子EC6108V9A备份backup的命令是，还是先进入工程测试模式插入u盘
 
-  mkdir /tmp/udisk
-  mkdir /tmp/backup
-  mount -t vfat /dev/block/sda1 /tmp/udisk
-  mount -t ext4 /dev/block/platform/1021c000.rksdmmc/by-name/backup /tmp/backup
-  cp -a /tmp/backup /tmp/udisk/v9abackup
-
-逆向写入：
+    mkdir /tmp/udisk
+    mkdir /tmp/backup
+    mount -t vfat /dev/block/sda1 /tmp/udisk
+    mount -t ext4 /dev/block/platform/1021c000.rksdmmc/by-name/backup /tmp/backup
+    cp -a /tmp/backup /tmp/udisk/v9abackup
+    逆向写入：
     mkdir /tmp/udisk
     mkdir /tmp/backup
     mount -t vfat /dev/block/sda1 /tmp/udisk
