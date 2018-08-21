@@ -1,7 +1,12 @@
 # ec6108V9U-plub
 
+<html>
+    <body background="http://p5k7mvi7l.bkt.clouddn.com/1521920903206.jpg"><!--加背景图片-->
+    <h1>Hello World</h1><!-- 一级标题书写形式-->
+    <p>Hello World
+    
 
->#备份固件  
+#备份固件  
 
 
 
@@ -112,8 +117,9 @@ ls /mnt/sda/sda1 -l
 -rwxrwxrwx system   sdcard_rw 226501658 2018-08-21 23:15 update.zip
 
 
-
-
+</p><!-- 普通段落书写格式-->
+    </body>
+    </html>
 
 
 
