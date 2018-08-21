@@ -40,11 +40,11 @@ https://www.baidu.com/s?ie=UTF-8&wd=3.3通过telnet方式登录华为悦盒%201�
   cp -a /tmp/backup /tmp/udisk/v9abackup
 
 逆向写入：
-  mkdir /tmp/udisk
-  mkdir /tmp/backup
-  mount -t vfat /dev/block/sda1 /tmp/udisk
-  mount -t ext4 /dev/block/platform/1021c000.rksdmmc/by-name/backup /tmp/backup
-  cp -a /tmp/udisk/v9abackup/update.zip /tmp/backup/update.zip
+    mkdir /tmp/udisk
+    mkdir /tmp/backup
+    mount -t vfat /dev/block/sda1 /tmp/udisk
+    mount -t ext4 /dev/block/platform/1021c000.rksdmmc/by-name/backup /tmp/backup
+    cp -a /tmp/udisk/v9abackup/update.zip /tmp/backup/update.zip
 
 这个操作需要有点基础的朋友才行， 希望大家备份了自己的出厂固件分享到论坛，感谢感谢！
 
@@ -61,8 +61,8 @@ https://www.baidu.com/s?ie=UTF-8&wd=3.3通过telnet方式登录华为悦盒%201�
 4）成功root后，可安装第三方APK,如当贝市场，从当贝市场中可直接下载更多电视软件，破解运营商限制看电视。
   
 2. sshroid：客户端用putty/sercertcrt登录，输入root@加盒子ip地址打开，输入密码admin登录wifiadb： 使用adb shell连接
-  mkdir /tmp/ii
-  mount -t ext3 /dev/block/platform/hi_mci.1/by-name/backup /tmp/ii
+    mkdir /tmp/ii
+    mount -t ext3 /dev/block/platform/hi_mci.1/by-name/backup /tmp/ii
 备份：
   cp /tmp/ii/update.zip /sdcard/或者u盘目录
 3. 用文件管理器将U盘已准备好的白色版固件覆盖到/tmp/ii/update.zip
@@ -94,25 +94,24 @@ df是不知道。。。
 http://www.hdpfans.com/thread-798429-1-1.html
 
 
-  mkdir /tmp/rom
-	
-  ls /tmp/rom
-  cat /sys/block/mmcblk0/dev
-  cat /sys/block/mmcblk0/dev
-  df
-  cp /tmp/rom/update.zip /mnt/sda/sda1
-  ls /mnt/sda/sda1 -l
+    mkdir /tmp/rom
+    ls /tmp/rom
+    cat /sys/block/mmcblk0/dev
+    cat /sys/block/mmcblk0/dev
+    df
+    cp /tmp/rom/update.zip /mnt/sda/sda1
+    ls /mnt/sda/sda1 -l
 
 
 
 
-  -rwxrwxrwx system   sdcard_rw 254151199 2016-01-22 16:04 update.zip失败了，是广东的固件
+    -rwxrwxrwx system   sdcard_rw 254151199 2016-01-22 16:04 update.zip失败了，是广东的固件
 
 从另一个正常的盒子里先降级成广东的，再备份，发现备份成功B015
 
 
 
-  -rwxrwxrwx system   sdcard_rw 226501658 2018-08-21 23:15 update.zip
+    -rwxrwxrwx system   sdcard_rw 226501658 2018-08-21 23:15 update.zip
 
 
 
